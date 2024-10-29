@@ -1,8 +1,8 @@
 import fs from "fs";
 
-// clase para representar un superheroe
-
+// Clase para representar un superhéroe.
 class Superheroe {
+  // Constructor que inicializa los atributos del superhéroe.
   constructor(
     id,
     nombreSuperheroe,
@@ -29,14 +29,13 @@ class Superheroe {
     this.enemigo = enemigo;
   }
 }
+//Funcion parta leer  ordenar los superheroes
+export function leerSuperheroes(ruta) {
+  const datos = fs.readFileSync(ruta, "utf8");
+  const superheroesArray = JSON.parse(datos);
 
-//Ordenar por nombre de superheroe
-export function leerListaSuperheroes(ListaSuperheroes) {
-  const datos = fs.readFileSync(ListaSuperheroes, "utf8");
-  const ListaSuperheroesArray = JSON.parse(datos);
-
-  //convertir a intancias de superheroe
-  const superheroes = ListaSuperheroesArray.map(
+  // convertir a isntancias de Superheroe
+  const superheroes = superheroesArray.map(
     (hero) =>
       new Superheroe(
         hero.id,
@@ -57,19 +56,18 @@ export function leerListaSuperheroes(ListaSuperheroes) {
   superheroes.sort((a, b) =>
     a.nombreSuperheroe.localeCompare(b.nombreSuperheroe)
   );
-
   return superheroes;
 }
-
-//nueva funcion para agregar superheroes
-export function agregarSuperheroes(ListaSuperheroes, agregarSuperheroes) {
-  const datosOriginales = fs.readFileSync(ListaSuperheroes, "utf8");
-  const datosNuevos = fs.readFileSync(agregarSuperheroes, "utf8");
+//funcion para agregar superheores
+export function agregarSuperheroes(rutaOriginal, rutaNuevos) {
+  const datosOriginales = fs.readFileSync(rutaOriginal, "utf8");
+  const datosNuevos = fs.readFileSync(rutaNuevos, "utf8");
 
   const superheroesOriginales = JSON.parse(datosOriginales);
   const nuevosSuperheroes = JSON.parse(datosNuevos);
 
-  //convertir los nuevos superheroes a instancias de superheroe
+  //convertir los neuvos superhoeres a isntancias de superheore
+
   const instanciasNuevos = nuevosSuperheroes.map(
     (hero) =>
       new Superheroe(
@@ -86,15 +84,14 @@ export function agregarSuperheroes(ListaSuperheroes, agregarSuperheroes) {
         hero.enemigo
       )
   );
-
   //combinar listas
   const listaActualizada = [...superheroesOriginales, ...instanciasNuevos];
 
   //guardar la lista actualizada
   fs.writeFileSync(
-    ListaSuperheroes,
+    rutaOriginal,
     JSON.stringify(listaActualizada, null, 2),
     "utf8"
   );
-  console.log("La lista de superheroes se actualizo con exito.");
+  console.log("lista actualizada con exito");
 }
