@@ -1,0 +1,26 @@
+Arquitectura:  x64
+Plataforma:  win32
+Memoria total: 17098842112
+Memora libre: 8655568896
+Informacion de la CPU: [
+  {
+    model: 'Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz',
+    speed: 2712,
+    times: { user: 2527312, nice: 0, sys: 224687, idle: 27984, irq: 15109 }
+  },
+  {
+    model: 'Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz',
+    speed: 2712,
+    times: { user: 373765, nice: 0, sys: 288703, idle: 2117312, irq: 1812 }
+  },
+  {
+    model: 'Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz',
+    speed: 2712,
+    times: { user: 453562, nice: 0, sys: 366171, idle: 1960046, irq: 1843 }
+  },
+  {
+    model: 'Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz',
+    speed: 2712,
+    times: { user: 461421, nice: 0, sys: 336265, idle: 1982093, irq: 1265 }
+  }
+]

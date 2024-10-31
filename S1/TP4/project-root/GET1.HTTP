@@ -1,0 +1,4 @@
+GET  /superheroes/id/1
+Host: localhost:3005
+
+//peticiono y me muestra lo que hay en tareas

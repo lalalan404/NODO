@@ -1,0 +1,4 @@
+PUT  /tareas/4/completar 
+Host: localhost:3000
+
+//cambio un valor en este caso false por true
