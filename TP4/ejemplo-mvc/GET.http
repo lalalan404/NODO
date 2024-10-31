@@ -1,0 +1,4 @@
+GET  /tareas 
+Host: localhost:3000
+
+//peticiono y me muestra lo que hay en tareas

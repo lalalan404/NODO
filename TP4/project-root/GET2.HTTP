@@ -1,0 +1,4 @@
+GET  /superheroes/atributo/planetaOrigen/Tierra
+Host: localhost:3005
+
+//segun algunsoa tributos realiza el filtro

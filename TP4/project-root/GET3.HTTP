@@ -1,0 +1,4 @@
+GET  /superheroes/edad/mayorA30
+Host: localhost:3005
+
+//muestra superheroes mayor a 30 y alguans condiciones
