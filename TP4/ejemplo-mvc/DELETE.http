@@ -1,4 +1,0 @@
-DELETE  /tareas/4 
-Host: localhost:3000
-
-//elimino un item segun su id
