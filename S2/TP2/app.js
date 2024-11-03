@@ -25,6 +25,7 @@ const superheroSchema = new mongoose.Schema(
     poderes: { type: [String] },
     aliados: { type: [String] },
     enemigos: { type: [String] },
+    autor: { type: [String], default: "alan" },
     createdAt: { type: Date, default: Date.now },
   },
   { collection: "Grupo-11" } // se agrega debido a que ya se creo collection Grupo-11.
@@ -33,7 +34,7 @@ const superheroSchema = new mongoose.Schema(
 // Creación del modelo SuperHero basado en el esquema
 const SuperHero = mongoose.model("SuperHero", superheroSchema);
 
-//----------------------------paso 3--------------------------------
+//----------------------------paso 3--------------------------------agregar
 async function insertSuperHero() {
   const hero = new SuperHero({
     nombreSuperHeroe: "Spiderman",
@@ -51,7 +52,7 @@ async function insertSuperHero() {
 }
 insertSuperHero();
 
-//------------------------paso 4------------------------
+//------------------------paso 4------------------------actualizar
 async function updateSuperHero(nombreSuperHeroe) {
   const result = await SuperHero.updateOne(
     { nombreSuperHeroe: "Ironman" }, // Condición para encontrar el héroe
@@ -63,7 +64,7 @@ async function updateSuperHero(nombreSuperHeroe) {
 
 updateSuperHero("Spiderman");
 
-//------------------paso 5------------------------------
+//------------------paso 5------------------------------eliminar
 async function deleteSuperHero(nombreSuperHeroe) {
   const result = await SuperHero.deleteOne({
     nombreSuperHeroe: nombreSuperHeroe,
@@ -73,7 +74,7 @@ async function deleteSuperHero(nombreSuperHeroe) {
 
 deleteSuperHero("Spiderman");
 
-//-------------------------paso 6-------------------------
+//-------------------------paso 6-------------------------buscar
 
 async function findSuperHeroes() {
   const heroes = await SuperHero.find({ planetaOrigen: "Tierra" });
