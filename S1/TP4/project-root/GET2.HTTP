@@ -1,4 +1,4 @@
-GET  /superheroes/atributo/planetaOrigen/Tierra
+GET  /superheroes/atributo/poder/Agilidad
 Host: localhost:3005
 
 //segun algunsoa tributos realiza el filtro

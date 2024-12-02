@@ -1,0 +1,4 @@
+GET  /api/heroes/buscar/edad/45
+Host: localhost:3000
+
+//filtra todos los documentos(heroes) por planeta de origen con el valor de tierra de la coleccion(grupo-11)

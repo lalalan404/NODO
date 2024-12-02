@@ -1,0 +1,4 @@
+GET  /api/heroes/672bee79f57a8e74b0ebcd70
+Host: localhost:3000
+
+//filtra _id por  todos los documentos(heroes)  de la coleccion(grupo-11)

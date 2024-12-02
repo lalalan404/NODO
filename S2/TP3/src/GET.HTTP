@@ -1,0 +1,4 @@
+GET  /api/heroes/
+Host: localhost:3000
+
+//me muestra todos los documentos(heroes)  de la coleccion(grupo-11)

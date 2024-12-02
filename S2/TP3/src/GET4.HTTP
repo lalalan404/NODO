@@ -1,0 +1,4 @@
+GET  /api/heroes/mayores/30
+Host: localhost:3000
+
+//me muestra todos los documentos(heroes)  de la coleccion(grupo-11) que cumplan el requisito de ser mayores a 30
